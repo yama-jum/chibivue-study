@@ -9,7 +9,6 @@ export const isOn = (key: string) => onRE.test(key);
 
 export const patchProp: DOMRendererOptions['patchProp'] = (el, key, value) => {
   if (isOn(key)) {
-    console.log(el, key, value);
     patchEvent(el, key, value);
   } else {
     patchAttr(el, key, value);
